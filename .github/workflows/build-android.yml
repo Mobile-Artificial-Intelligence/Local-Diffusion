@@ -59,7 +59,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: maid-android-apk
+          name: local-diffusion-android-apk
           path: build/app/outputs/apk/release
 
       - name: Build appbundle
@@ -67,10 +67,10 @@ jobs:
           flutter build appbundle
 
       - name: Rename AAB
-        run: mv build/app/outputs/bundle/release/app-release.aab build/app/outputs/bundle/release/maid-android-bundle.aab
+        run: mv build/app/outputs/bundle/release/app-release.aab build/app/outputs/bundle/release/local-diffusion-android-bundle.aab
 
       - name: Upload AAB
         uses: actions/upload-artifact@v4
         with:
-          name: maid-android-aab
-          path: build/app/outputs/bundle/release/maid-android-bundle.aab
+          name: local-diffusion-android-aab
+          path: build/app/outputs/bundle/release/local-diffusion-android-bundle.aab
